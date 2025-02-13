@@ -38,6 +38,9 @@ class test_grpcRecipe(ConanFile):
         cmake = CMake(self)
         cmake.install()
 
+    def requirements(self):
+        self.requires("grpc/1.67.1")
+
     
 
     
