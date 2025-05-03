@@ -1,6 +1,16 @@
-#include <cstdint>
+#include <iostream>
+#include <memory>
+#include <string>
 
-int32_t main()
-{
+#include <grpcpp/grpcpp.h>
+
+#include "helloworld.pb.h"
+#include "helloworld.grpc.pb.h"
+
+
+
+int main(int argc, char** argv) {
+   
+
     return 0;
 }

@@ -39,7 +39,8 @@ class test_grpcRecipe(ConanFile):
         cmake.install()
 
     def requirements(self):
-        self.requires("grpc/1.67.1")
+        self.requires("abseil/20250127.0", override=True)
+        self.requires("grpc/1.69.0")
 
     
 
