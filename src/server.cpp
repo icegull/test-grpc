@@ -22,6 +22,7 @@ using grpc::Status;
 using helloworld::Greeter;
 using helloworld::HelloReply;
 using helloworld::HelloRequest;
+using helloworld::PGMFreezeInfo;
 
 // Logic and data behind the server's behavior.
 class GreeterServiceImpl final : public Greeter::Service
@@ -69,13 +70,29 @@ public:
         bool name_received = false;
 
         // 启动回复线程
-        std::thread reply_thread([&]()
-                                 {
+        std::thread reply_thread([&]() {
             int counter = 0;
             while (!should_stop.load()) {
                 if (name_received) {
+                    PGMFreezeInfo freezeInfo;
+                    
+                    // Add sample video freeze data
+                    freezeInfo.mutable_video_gm_player_freeze()->insert({1001, 1500});
+                    freezeInfo.mutable_video_gm_player_freeze()->insert({1002, 2300});
+                    freezeInfo.mutable_video_gm_player_freeze()->insert({1003, 800});
+                    
+                    // Add sample audio freeze data  
+                    freezeInfo.mutable_audio_pgm_player_freeze()->insert({2001, 950});
+                    freezeInfo.mutable_audio_pgm_player_freeze()->insert({2002, 1200});
+                    freezeInfo.mutable_audio_pgm_player_freeze()->insert({2003, 600});
+                    
+                     // Serialize the freeze info to Any type for the reply
+                    google::protobuf::Any any_data;
+                    any_data.PackFrom(freezeInfo);
+
                     HelloReply reply;
                     reply.set_message("Hello " + client_name + " - message #" + std::to_string(counter++));
+                    reply.mutable_data()->CopyFrom(any_data);
                     
                     // 写入回复，如果失败则停止
                     if (!stream->Write(reply)) {
@@ -89,7 +106,8 @@ public:
                 // 控制发送频率
                 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             }
-            std::cout << "Reply thread stopped for " << client_name << std::endl; });
+            std::cout << "Reply thread stopped for " << client_name << std::endl;
+        });
 
         // 读取客户端请求
         HelloRequest request;

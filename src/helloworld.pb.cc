@@ -24,6 +24,30 @@ namespace _pb = ::google::protobuf;
 namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace helloworld {
+      template <typename>
+PROTOBUF_CONSTEXPR PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal _PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal _PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse_default_instance_;
 
 inline constexpr HelloRequest::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -46,12 +70,33 @@ struct HelloRequestDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HelloRequestDefaultTypeInternal _HelloRequest_default_instance_;
 
+inline constexpr PGMFreezeInfo::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : video_gm_player_freeze_{},
+        audio_pgm_player_freeze_{},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR PGMFreezeInfo::PGMFreezeInfo(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct PGMFreezeInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PGMFreezeInfoDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PGMFreezeInfoDefaultTypeInternal() {}
+  union {
+    PGMFreezeInfo _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PGMFreezeInfoDefaultTypeInternal _PGMFreezeInfo_default_instance_;
+
 inline constexpr HelloReply::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : message_(
+      : _cached_size_{0},
+        message_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        _cached_size_{0} {}
+        data_{nullptr} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR HelloReply::HelloReply(::_pbi::ConstantInitialized)
@@ -83,7 +128,7 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::helloworld::HelloRequest, _impl_.name_),
-        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::helloworld::HelloReply, _impl_._has_bits_),
         PROTOBUF_FIELD_OFFSET(::helloworld::HelloReply, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
@@ -92,41 +137,97 @@ const ::uint32_t
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::helloworld::HelloReply, _impl_.message_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::HelloReply, _impl_.data_),
+        ~0u,
+        0,
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, _has_bits_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, key_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, value_),
+        0,
+        1,
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, _has_bits_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, key_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, value_),
+        0,
+        1,
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo, _impl_.video_gm_player_freeze_),
+        PROTOBUF_FIELD_OFFSET(::helloworld::PGMFreezeInfo, _impl_.audio_pgm_player_freeze_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
         {0, -1, -1, sizeof(::helloworld::HelloRequest)},
-        {9, -1, -1, sizeof(::helloworld::HelloReply)},
+        {9, 19, -1, sizeof(::helloworld::HelloReply)},
+        {21, 31, -1, sizeof(::helloworld::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse)},
+        {33, 43, -1, sizeof(::helloworld::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse)},
+        {45, -1, -1, sizeof(::helloworld::PGMFreezeInfo)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
     &::helloworld::_HelloRequest_default_instance_._instance,
     &::helloworld::_HelloReply_default_instance_._instance,
+    &::helloworld::_PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse_default_instance_._instance,
+    &::helloworld::_PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse_default_instance_._instance,
+    &::helloworld::_PGMFreezeInfo_default_instance_._instance,
 };
 const char descriptor_table_protodef_helloworld_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\020helloworld.proto\022\nhelloworld\"\034\n\014HelloR"
-    "equest\022\014\n\004name\030\001 \001(\t\"\035\n\nHelloReply\022\017\n\007me"
-    "ssage\030\001 \001(\t2\344\001\n\007Greeter\022>\n\010SayHello\022\030.he"
-    "lloworld.HelloRequest\032\026.helloworld.Hello"
-    "Reply\"\000\022K\n\023SayHelloStreamReply\022\030.hellowo"
-    "rld.HelloRequest\032\026.helloworld.HelloReply"
-    "\"\0000\001\022L\n\022SayHelloBidiStream\022\030.helloworld."
-    "HelloRequest\032\026.helloworld.HelloReply\"\000(\001"
-    "0\001B6\n\033io.grpc.examples.helloworldB\017Hello"
-    "WorldProtoP\001\242\002\003HLWb\006proto3"
+    "\n\020helloworld.proto\022\nhelloworld\032\031google/p"
+    "rotobuf/any.proto\"\034\n\014HelloRequest\022\014\n\004nam"
+    "e\030\001 \001(\t\"A\n\nHelloReply\022\017\n\007message\030\001 \001(\t\022\""
+    "\n\004data\030\002 \001(\0132\024.google.protobuf.Any\"\262\002\n\rP"
+    "GMFreezeInfo\022R\n\026video_gm_player_freeze\030\001"
+    " \003(\01322.helloworld.PGMFreezeInfo.VideoGmP"
+    "layerFreezeEntry\022T\n\027audio_pgm_player_fre"
+    "eze\030\002 \003(\01323.helloworld.PGMFreezeInfo.Aud"
+    "ioPgmPlayerFreezeEntry\032:\n\030VideoGmPlayerF"
+    "reezeEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\004:\002"
+    "8\001\032;\n\031AudioPgmPlayerFreezeEntry\022\013\n\003key\030\001"
+    " \001(\r\022\r\n\005value\030\002 \001(\004:\0028\0012\344\001\n\007Greeter\022>\n\010S"
+    "ayHello\022\030.helloworld.HelloRequest\032\026.hell"
+    "oworld.HelloReply\"\000\022K\n\023SayHelloStreamRep"
+    "ly\022\030.helloworld.HelloRequest\032\026.helloworl"
+    "d.HelloReply\"\0000\001\022L\n\022SayHelloBidiStream\022\030"
+    ".helloworld.HelloRequest\032\026.helloworld.He"
+    "lloReply\"\000(\0010\001B6\n\033io.grpc.examples.hello"
+    "worldB\017HelloWorldProtoP\001\242\002\003HLWb\006proto3"
+};
+static const ::_pbi::DescriptorTable* const descriptor_table_helloworld_2eproto_deps[1] =
+    {
+        &::descriptor_table_google_2fprotobuf_2fany_2eproto,
 };
 static ::absl::once_flag descriptor_table_helloworld_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_helloworld_2eproto = {
     false,
     false,
-    386,
+    758,
     descriptor_table_protodef_helloworld_2eproto,
     "helloworld.proto",
     &descriptor_table_helloworld_2eproto_once,
-    nullptr,
-    0,
-    2,
+    descriptor_table_helloworld_2eproto_deps,
+    1,
+    5,
     schemas,
     file_default_instances,
     TableStruct_helloworld_2eproto::offsets,
@@ -330,8 +431,17 @@ void HelloRequest::InternalSwap(HelloRequest* PROTOBUF_RESTRICT other) {
 
 class HelloReply::_Internal {
  public:
+  using HasBits =
+      decltype(std::declval<HelloReply>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(HelloReply, _impl_._has_bits_);
 };
 
+void HelloReply::clear_data() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.data_ != nullptr) _impl_.data_->Clear();
+  _impl_._has_bits_[0] &= ~0x00000001u;
+}
 HelloReply::HelloReply(::google::protobuf::Arena* arena)
     : ::google::protobuf::Message(arena) {
   SharedCtor(arena);
@@ -340,8 +450,9 @@ HelloReply::HelloReply(::google::protobuf::Arena* arena)
 inline PROTOBUF_NDEBUG_INLINE HelloReply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
     const Impl_& from, const ::helloworld::HelloReply& from_msg)
-      : message_(arena, from.message_),
-        _cached_size_{0} {}
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        message_(arena, from.message_) {}
 
 HelloReply::HelloReply(
     ::google::protobuf::Arena* arena,
@@ -352,17 +463,22 @@ HelloReply::HelloReply(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.data_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::google::protobuf::Any>(
+                              arena, *from._impl_.data_)
+                        : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:helloworld.HelloReply)
 }
 inline PROTOBUF_NDEBUG_INLINE HelloReply::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : message_(arena),
-        _cached_size_{0} {}
+      : _cached_size_{0},
+        message_(arena) {}
 
 inline void HelloReply::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.data_ = {};
 }
 HelloReply::~HelloReply() {
   // @@protoc_insertion_point(destructor:helloworld.HelloReply)
@@ -372,6 +488,7 @@ HelloReply::~HelloReply() {
 inline void HelloReply::SharedDtor() {
   ABSL_DCHECK(GetArena() == nullptr);
   _impl_.message_.Destroy();
+  delete _impl_.data_;
   _impl_.~Impl_();
 }
 
@@ -396,17 +513,17 @@ HelloReply::GetClassData() const {
   return _data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 37, 2> HelloReply::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 1, 37, 2> HelloReply::_table_ = {
   {
-    0,  // no _has_bits_
+    PROTOBUF_FIELD_OFFSET(HelloReply, _impl_._has_bits_),
     0, // no _extensions_
-    1, 0,  // max_field_number, fast_idx_mask
+    2, 8,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967294,  // skipmap
+    4294967292,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    1,  // num_field_entries
-    0,  // num_aux_entries
-    offsetof(decltype(_table_), field_names),  // no aux_entries
+    2,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
     &_HelloReply_default_instance_._instance,
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
@@ -414,6 +531,9 @@ const ::_pbi::TcParseTable<0, 1, 0, 37, 2> HelloReply::_table_ = {
     ::_pbi::TcParser::GetTable<::helloworld::HelloReply>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
+    // .google.protobuf.Any data = 2;
+    {::_pbi::TcParser::FastMtS1,
+     {18, 0, 0, PROTOBUF_FIELD_OFFSET(HelloReply, _impl_.data_)}},
     // string message = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(HelloReply, _impl_.message_)}},
@@ -421,11 +541,14 @@ const ::_pbi::TcParseTable<0, 1, 0, 37, 2> HelloReply::_table_ = {
     65535, 65535
   }}, {{
     // string message = 1;
-    {PROTOBUF_FIELD_OFFSET(HelloReply, _impl_.message_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(HelloReply, _impl_.message_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-  }},
-  // no aux_entries
-  {{
+    // .google.protobuf.Any data = 2;
+    {PROTOBUF_FIELD_OFFSET(HelloReply, _impl_.data_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::google::protobuf::Any>()},
+  }}, {{
     "\25\7\0\0\0\0\0\0"
     "helloworld.HelloReply"
     "message"
@@ -440,6 +563,12 @@ PROTOBUF_NOINLINE void HelloReply::Clear() {
   (void) cached_has_bits;
 
   _impl_.message_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.data_ != nullptr);
+    _impl_.data_->Clear();
+  }
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -456,6 +585,13 @@ PROTOBUF_NOINLINE void HelloReply::Clear() {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
         _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "helloworld.HelloReply.message");
     target = stream->WriteStringMaybeAliased(1, _s, target);
+  }
+
+  cached_has_bits = _impl_._has_bits_[0];
+  // .google.protobuf.Any data = 2;
+  if (cached_has_bits & 0x00000001u) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        2, *_impl_.data_, _impl_.data_->GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -475,10 +611,18 @@ PROTOBUF_NOINLINE void HelloReply::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
   // string message = 1;
   if (!this->_internal_message().empty()) {
     total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                     this->_internal_message());
+  }
+
+  // .google.protobuf.Any data = 2;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size +=
+        1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.data_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -488,6 +632,7 @@ PROTOBUF_NOINLINE void HelloReply::Clear() {
 void HelloReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
   auto* const _this = static_cast<HelloReply*>(&to_msg);
   auto& from = static_cast<const HelloReply&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
   // @@protoc_insertion_point(class_specific_merge_from_start:helloworld.HelloReply)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
@@ -496,6 +641,17 @@ void HelloReply::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
   if (!from._internal_message().empty()) {
     _this->_internal_set_message(from._internal_message());
   }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(from._impl_.data_ != nullptr);
+    if (_this->_impl_.data_ == nullptr) {
+      _this->_impl_.data_ =
+          ::google::protobuf::Message::CopyConstruct<::google::protobuf::Any>(arena, *from._impl_.data_);
+    } else {
+      _this->_impl_.data_->MergeFrom(*from._impl_.data_);
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -512,10 +668,300 @@ void HelloReply::InternalSwap(HelloReply* PROTOBUF_RESTRICT other) {
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  swap(_impl_.data_, other->_impl_.data_);
 }
 
 ::google::protobuf::Metadata HelloReply::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse() {}
+PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
+const ::google::protobuf::MessageLite::ClassData*
+PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::GetClassData() const {
+  PROTOBUF_CONSTINIT static const ::google::protobuf::MessageLite::
+      ClassDataFull _data_ = {
+          {
+              nullptr,  // tc_table
+              nullptr,  // OnDemandRegisterArenaDtor
+              nullptr,  // IsInitialized
+              PROTOBUF_FIELD_OFFSET(PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, _cached_size_),
+              false,
+          },
+          &PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::MergeImpl,
+          &PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse::kDescriptorMethods,
+          &descriptor_table_helloworld_2eproto,
+          nullptr,  // tracker
+      };
+  ::google::protobuf::internal::PrefetchToLocalCache(&_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_data_.tc_table);
+  return _data_.base();
+}
+// ===================================================================
+
+PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse() {}
+PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse(::google::protobuf::Arena* arena) : SuperType(arena) {}
+const ::google::protobuf::MessageLite::ClassData*
+PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::GetClassData() const {
+  PROTOBUF_CONSTINIT static const ::google::protobuf::MessageLite::
+      ClassDataFull _data_ = {
+          {
+              nullptr,  // tc_table
+              nullptr,  // OnDemandRegisterArenaDtor
+              nullptr,  // IsInitialized
+              PROTOBUF_FIELD_OFFSET(PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, _cached_size_),
+              false,
+          },
+          &PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::MergeImpl,
+          &PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse::kDescriptorMethods,
+          &descriptor_table_helloworld_2eproto,
+          nullptr,  // tracker
+      };
+  ::google::protobuf::internal::PrefetchToLocalCache(&_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_data_.tc_table);
+  return _data_.base();
+}
+// ===================================================================
+
+class PGMFreezeInfo::_Internal {
+ public:
+};
+
+PGMFreezeInfo::PGMFreezeInfo(::google::protobuf::Arena* arena)
+    : ::google::protobuf::Message(arena) {
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:helloworld.PGMFreezeInfo)
+}
+inline PROTOBUF_NDEBUG_INLINE PGMFreezeInfo::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::helloworld::PGMFreezeInfo& from_msg)
+      : video_gm_player_freeze_{visibility, arena, from.video_gm_player_freeze_},
+        audio_pgm_player_freeze_{visibility, arena, from.audio_pgm_player_freeze_},
+        _cached_size_{0} {}
+
+PGMFreezeInfo::PGMFreezeInfo(
+    ::google::protobuf::Arena* arena,
+    const PGMFreezeInfo& from)
+    : ::google::protobuf::Message(arena) {
+  PGMFreezeInfo* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:helloworld.PGMFreezeInfo)
+}
+inline PROTOBUF_NDEBUG_INLINE PGMFreezeInfo::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : video_gm_player_freeze_{visibility, arena},
+        audio_pgm_player_freeze_{visibility, arena},
+        _cached_size_{0} {}
+
+inline void PGMFreezeInfo::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+PGMFreezeInfo::~PGMFreezeInfo() {
+  // @@protoc_insertion_point(destructor:helloworld.PGMFreezeInfo)
+  _internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  SharedDtor();
+}
+inline void PGMFreezeInfo::SharedDtor() {
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
+}
+
+const ::google::protobuf::MessageLite::ClassData*
+PGMFreezeInfo::GetClassData() const {
+  PROTOBUF_CONSTINIT static const ::google::protobuf::MessageLite::
+      ClassDataFull _data_ = {
+          {
+              &_table_.header,
+              nullptr,  // OnDemandRegisterArenaDtor
+              nullptr,  // IsInitialized
+              PROTOBUF_FIELD_OFFSET(PGMFreezeInfo, _impl_._cached_size_),
+              false,
+          },
+          &PGMFreezeInfo::MergeImpl,
+          &PGMFreezeInfo::kDescriptorMethods,
+          &descriptor_table_helloworld_2eproto,
+          nullptr,  // tracker
+      };
+  ::google::protobuf::internal::PrefetchToLocalCache(&_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_data_.tc_table);
+  return _data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 2, 2, 0, 2> PGMFreezeInfo::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    2,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    &_PGMFreezeInfo_default_instance_._instance,
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::helloworld::PGMFreezeInfo>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // map<uint32, uint64> video_gm_player_freeze = 1;
+    {PROTOBUF_FIELD_OFFSET(PGMFreezeInfo, _impl_.video_gm_player_freeze_), 0, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+    // map<uint32, uint64> audio_pgm_player_freeze = 2;
+    {PROTOBUF_FIELD_OFFSET(PGMFreezeInfo, _impl_.audio_pgm_player_freeze_), 0, 1,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+  }}, {{
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(PGMFreezeInfo()._impl_.video_gm_player_freeze_)>(
+        0, 0, 0, 13,
+        4)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(PGMFreezeInfo()._impl_.audio_pgm_player_freeze_)>(
+        0, 0, 0, 13,
+        4)},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void PGMFreezeInfo::Clear() {
+// @@protoc_insertion_point(message_clear_start:helloworld.PGMFreezeInfo)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.video_gm_player_freeze_.Clear();
+  _impl_.audio_pgm_player_freeze_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+::uint8_t* PGMFreezeInfo::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:helloworld.PGMFreezeInfo)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  // map<uint32, uint64> video_gm_player_freeze = 1;
+  if (!_internal_video_gm_player_freeze().empty()) {
+    using MapType = ::google::protobuf::Map<::uint32_t, ::uint64_t>;
+    using WireHelper = _pbi::MapEntryFuncs<::uint32_t, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_UINT64>;
+    const auto& field = _internal_video_gm_player_freeze();
+
+    if (stream->IsSerializationDeterministic() && field.size() > 1) {
+      for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+        target = WireHelper::InternalSerialize(
+            1, entry.first, entry.second, target, stream);
+      }
+    } else {
+      for (const auto& entry : field) {
+        target = WireHelper::InternalSerialize(
+            1, entry.first, entry.second, target, stream);
+      }
+    }
+  }
+
+  // map<uint32, uint64> audio_pgm_player_freeze = 2;
+  if (!_internal_audio_pgm_player_freeze().empty()) {
+    using MapType = ::google::protobuf::Map<::uint32_t, ::uint64_t>;
+    using WireHelper = _pbi::MapEntryFuncs<::uint32_t, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_UINT64>;
+    const auto& field = _internal_audio_pgm_player_freeze();
+
+    if (stream->IsSerializationDeterministic() && field.size() > 1) {
+      for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+        target = WireHelper::InternalSerialize(
+            2, entry.first, entry.second, target, stream);
+      }
+    } else {
+      for (const auto& entry : field) {
+        target = WireHelper::InternalSerialize(
+            2, entry.first, entry.second, target, stream);
+      }
+    }
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:helloworld.PGMFreezeInfo)
+  return target;
+}
+
+::size_t PGMFreezeInfo::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:helloworld.PGMFreezeInfo)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(reinterpret_cast<const void*>(this));
+  // map<uint32, uint64> video_gm_player_freeze = 1;
+  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_video_gm_player_freeze_size());
+  for (const auto& entry : _internal_video_gm_player_freeze()) {
+    total_size += _pbi::MapEntryFuncs<::uint32_t, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
+  }
+  // map<uint32, uint64> audio_pgm_player_freeze = 2;
+  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_audio_pgm_player_freeze_size());
+  for (const auto& entry : _internal_audio_pgm_player_freeze()) {
+    total_size += _pbi::MapEntryFuncs<::uint32_t, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
+  }
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+
+void PGMFreezeInfo::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<PGMFreezeInfo*>(&to_msg);
+  auto& from = static_cast<const PGMFreezeInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:helloworld.PGMFreezeInfo)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.video_gm_player_freeze_.MergeFrom(from._impl_.video_gm_player_freeze_);
+  _this->_impl_.audio_pgm_player_freeze_.MergeFrom(from._impl_.audio_pgm_player_freeze_);
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void PGMFreezeInfo::CopyFrom(const PGMFreezeInfo& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:helloworld.PGMFreezeInfo)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void PGMFreezeInfo::InternalSwap(PGMFreezeInfo* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.video_gm_player_freeze_.InternalSwap(&other->_impl_.video_gm_player_freeze_);
+  _impl_.audio_pgm_player_freeze_.InternalSwap(&other->_impl_.audio_pgm_player_freeze_);
+}
+
+::google::protobuf::Metadata PGMFreezeInfo::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

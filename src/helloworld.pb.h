@@ -27,7 +27,11 @@
 #include "google/protobuf/message.h"
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
+#include "google/protobuf/map.h"  // IWYU pragma: export
+#include "google/protobuf/map_entry.h"
+#include "google/protobuf/map_field_inl.h"
 #include "google/protobuf/unknown_field_set.h"
+#include "google/protobuf/any.pb.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
@@ -56,6 +60,15 @@ extern HelloReplyDefaultTypeInternal _HelloReply_default_instance_;
 class HelloRequest;
 struct HelloRequestDefaultTypeInternal;
 extern HelloRequestDefaultTypeInternal _HelloRequest_default_instance_;
+class PGMFreezeInfo;
+struct PGMFreezeInfoDefaultTypeInternal;
+extern PGMFreezeInfoDefaultTypeInternal _PGMFreezeInfo_default_instance_;
+class PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse;
+struct PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal;
+extern PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUseDefaultTypeInternal _PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse_default_instance_;
+class PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse;
+struct PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal;
+extern PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUseDefaultTypeInternal _PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse_default_instance_;
 }  // namespace helloworld
 namespace google {
 namespace protobuf {
@@ -67,6 +80,54 @@ namespace helloworld {
 // ===================================================================
 
 
+// -------------------------------------------------------------------
+
+class PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse final
+    : public ::google::protobuf::internal::MapEntry<
+          PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+          ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+          ::google::protobuf::internal::WireFormatLite::TYPE_UINT64> {
+ public:
+  using SuperType = ::google::protobuf::internal::MapEntry<
+      PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+      ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>;
+  PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse();
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse(
+      ::google::protobuf::internal::ConstantInitialized);
+  explicit PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse(::google::protobuf::Arena* arena);
+  static const PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse* internal_default_instance() {
+    return reinterpret_cast<const PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse*>(
+        &_PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse_default_instance_);
+  }
+const ::google::protobuf::Message::ClassData* GetClassData() const final;
+  friend struct ::TableStruct_helloworld_2eproto;
+};
+// -------------------------------------------------------------------
+
+class PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse final
+    : public ::google::protobuf::internal::MapEntry<
+          PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+          ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+          ::google::protobuf::internal::WireFormatLite::TYPE_UINT64> {
+ public:
+  using SuperType = ::google::protobuf::internal::MapEntry<
+      PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+      ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>;
+  PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse();
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse(
+      ::google::protobuf::internal::ConstantInitialized);
+  explicit PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse(::google::protobuf::Arena* arena);
+  static const PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse* internal_default_instance() {
+    return reinterpret_cast<const PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse*>(
+        &_PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse_default_instance_);
+  }
+const ::google::protobuf::Message::ClassData* GetClassData() const final;
+  friend struct ::TableStruct_helloworld_2eproto;
+};
 // -------------------------------------------------------------------
 
 class HelloRequest final : public ::google::protobuf::Message
@@ -246,6 +307,205 @@ class HelloRequest final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
+class PGMFreezeInfo final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:helloworld.PGMFreezeInfo) */ {
+ public:
+  inline PGMFreezeInfo() : PGMFreezeInfo(nullptr) {}
+  ~PGMFreezeInfo() override;
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR PGMFreezeInfo(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline PGMFreezeInfo(const PGMFreezeInfo& from) : PGMFreezeInfo(nullptr, from) {}
+  inline PGMFreezeInfo(PGMFreezeInfo&& from) noexcept
+      : PGMFreezeInfo(nullptr, std::move(from)) {}
+  inline PGMFreezeInfo& operator=(const PGMFreezeInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline PGMFreezeInfo& operator=(PGMFreezeInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetArena() == from.GetArena()
+#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetArena() != nullptr
+#endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const PGMFreezeInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const PGMFreezeInfo* internal_default_instance() {
+    return reinterpret_cast<const PGMFreezeInfo*>(
+        &_PGMFreezeInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(PGMFreezeInfo& a, PGMFreezeInfo& b) { a.Swap(&b); }
+  inline void Swap(PGMFreezeInfo* other) {
+    if (other == this) return;
+#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() != nullptr && GetArena() == other->GetArena()) {
+#else   // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetArena() == other->GetArena()) {
+#endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(PGMFreezeInfo* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  PGMFreezeInfo* New(::google::protobuf::Arena* arena = nullptr) const final {
+    return ::google::protobuf::Message::DefaultConstruct<PGMFreezeInfo>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const PGMFreezeInfo& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const PGMFreezeInfo& from) { PGMFreezeInfo::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() final;
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  void SharedDtor();
+  void InternalSwap(PGMFreezeInfo* other);
+ private:
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::absl::string_view FullMessageName() { return "helloworld.PGMFreezeInfo"; }
+
+ protected:
+  explicit PGMFreezeInfo(::google::protobuf::Arena* arena);
+  PGMFreezeInfo(::google::protobuf::Arena* arena, const PGMFreezeInfo& from);
+  PGMFreezeInfo(::google::protobuf::Arena* arena, PGMFreezeInfo&& from) noexcept
+      : PGMFreezeInfo(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::Message::ClassData* GetClassData() const final;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kVideoGmPlayerFreezeFieldNumber = 1,
+    kAudioPgmPlayerFreezeFieldNumber = 2,
+  };
+  // map<uint32, uint64> video_gm_player_freeze = 1;
+  int video_gm_player_freeze_size() const;
+  private:
+  int _internal_video_gm_player_freeze_size() const;
+
+  public:
+  void clear_video_gm_player_freeze() ;
+  const ::google::protobuf::Map<::uint32_t, ::uint64_t>& video_gm_player_freeze() const;
+  ::google::protobuf::Map<::uint32_t, ::uint64_t>* mutable_video_gm_player_freeze();
+
+  private:
+  const ::google::protobuf::Map<::uint32_t, ::uint64_t>& _internal_video_gm_player_freeze() const;
+  ::google::protobuf::Map<::uint32_t, ::uint64_t>* _internal_mutable_video_gm_player_freeze();
+
+  public:
+  // map<uint32, uint64> audio_pgm_player_freeze = 2;
+  int audio_pgm_player_freeze_size() const;
+  private:
+  int _internal_audio_pgm_player_freeze_size() const;
+
+  public:
+  void clear_audio_pgm_player_freeze() ;
+  const ::google::protobuf::Map<::uint32_t, ::uint64_t>& audio_pgm_player_freeze() const;
+  ::google::protobuf::Map<::uint32_t, ::uint64_t>* mutable_audio_pgm_player_freeze();
+
+  private:
+  const ::google::protobuf::Map<::uint32_t, ::uint64_t>& _internal_audio_pgm_player_freeze() const;
+  ::google::protobuf::Map<::uint32_t, ::uint64_t>* _internal_mutable_audio_pgm_player_freeze();
+
+  public:
+  // @@protoc_insertion_point(class_scope:helloworld.PGMFreezeInfo)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 2, 2,
+      0, 2>
+      _table_;
+
+  static constexpr const void* _raw_default_instance_ =
+      &_PGMFreezeInfo_default_instance_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const PGMFreezeInfo& from_msg);
+    ::google::protobuf::internal::MapField<PGMFreezeInfo_VideoGmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>
+        video_gm_player_freeze_;
+    ::google::protobuf::internal::MapField<PGMFreezeInfo_AudioPgmPlayerFreezeEntry_DoNotUse, ::uint32_t, ::uint64_t,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT32,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>
+        audio_pgm_player_freeze_;
+    mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_helloworld_2eproto;
+};
+// -------------------------------------------------------------------
+
 class HelloReply final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:helloworld.HelloReply) */ {
  public:
@@ -371,6 +631,7 @@ class HelloReply final : public ::google::protobuf::Message
   // accessors -------------------------------------------------------
   enum : int {
     kMessageFieldNumber = 1,
+    kDataFieldNumber = 2,
   };
   // string message = 1;
   void clear_message() ;
@@ -388,12 +649,27 @@ class HelloReply final : public ::google::protobuf::Message
   std::string* _internal_mutable_message();
 
   public:
+  // .google.protobuf.Any data = 2;
+  bool has_data() const;
+  void clear_data() ;
+  const ::google::protobuf::Any& data() const;
+  PROTOBUF_NODISCARD ::google::protobuf::Any* release_data();
+  ::google::protobuf::Any* mutable_data();
+  void set_allocated_data(::google::protobuf::Any* value);
+  void unsafe_arena_set_allocated_data(::google::protobuf::Any* value);
+  ::google::protobuf::Any* unsafe_arena_release_data();
+
+  private:
+  const ::google::protobuf::Any& _internal_data() const;
+  ::google::protobuf::Any* _internal_mutable_data();
+
+  public:
   // @@protoc_insertion_point(class_scope:helloworld.HelloReply)
  private:
   class _Internal;
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 1, 0,
+      1, 2, 1,
       37, 2>
       _table_;
 
@@ -414,8 +690,10 @@ class HelloReply final : public ::google::protobuf::Message
     inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                           ::google::protobuf::Arena* arena, const Impl_& from,
                           const HelloReply& from_msg);
-    ::google::protobuf::internal::ArenaStringPtr message_;
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    ::google::protobuf::Any* data_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
   union { Impl_ _impl_; };
@@ -540,6 +818,161 @@ inline void HelloReply::set_allocated_message(std::string* value) {
         }
   #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   // @@protoc_insertion_point(field_set_allocated:helloworld.HelloReply.message)
+}
+
+// .google.protobuf.Any data = 2;
+inline bool HelloReply::has_data() const {
+  bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
+  PROTOBUF_ASSUME(!value || _impl_.data_ != nullptr);
+  return value;
+}
+inline const ::google::protobuf::Any& HelloReply::_internal_data() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  const ::google::protobuf::Any* p = _impl_.data_;
+  return p != nullptr ? *p : reinterpret_cast<const ::google::protobuf::Any&>(::google::protobuf::_Any_default_instance_);
+}
+inline const ::google::protobuf::Any& HelloReply::data() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:helloworld.HelloReply.data)
+  return _internal_data();
+}
+inline void HelloReply::unsafe_arena_set_allocated_data(::google::protobuf::Any* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.data_);
+  }
+  _impl_.data_ = reinterpret_cast<::google::protobuf::Any*>(value);
+  if (value != nullptr) {
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:helloworld.HelloReply.data)
+}
+inline ::google::protobuf::Any* HelloReply::release_data() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::google::protobuf::Any* released = _impl_.data_;
+  _impl_.data_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old = reinterpret_cast<::google::protobuf::MessageLite*>(released);
+  released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  if (GetArena() == nullptr) {
+    delete old;
+  }
+#else   // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArena() != nullptr) {
+    released = ::google::protobuf::internal::DuplicateIfNonNull(released);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return released;
+}
+inline ::google::protobuf::Any* HelloReply::unsafe_arena_release_data() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:helloworld.HelloReply.data)
+
+  _impl_._has_bits_[0] &= ~0x00000001u;
+  ::google::protobuf::Any* temp = _impl_.data_;
+  _impl_.data_ = nullptr;
+  return temp;
+}
+inline ::google::protobuf::Any* HelloReply::_internal_mutable_data() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (_impl_.data_ == nullptr) {
+    auto* p = ::google::protobuf::Message::DefaultConstruct<::google::protobuf::Any>(GetArena());
+    _impl_.data_ = reinterpret_cast<::google::protobuf::Any*>(p);
+  }
+  return _impl_.data_;
+}
+inline ::google::protobuf::Any* HelloReply::mutable_data() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  _impl_._has_bits_[0] |= 0x00000001u;
+  ::google::protobuf::Any* _msg = _internal_mutable_data();
+  // @@protoc_insertion_point(field_mutable:helloworld.HelloReply.data)
+  return _msg;
+}
+inline void HelloReply::set_allocated_data(::google::protobuf::Any* value) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (message_arena == nullptr) {
+    delete reinterpret_cast<::google::protobuf::MessageLite*>(_impl_.data_);
+  }
+
+  if (value != nullptr) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::google::protobuf::internal::GetOwnedMessage(message_arena, value, submessage_arena);
+    }
+    _impl_._has_bits_[0] |= 0x00000001u;
+  } else {
+    _impl_._has_bits_[0] &= ~0x00000001u;
+  }
+
+  _impl_.data_ = reinterpret_cast<::google::protobuf::Any*>(value);
+  // @@protoc_insertion_point(field_set_allocated:helloworld.HelloReply.data)
+}
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// PGMFreezeInfo
+
+// map<uint32, uint64> video_gm_player_freeze = 1;
+inline int PGMFreezeInfo::_internal_video_gm_player_freeze_size() const {
+  return _internal_video_gm_player_freeze().size();
+}
+inline int PGMFreezeInfo::video_gm_player_freeze_size() const {
+  return _internal_video_gm_player_freeze_size();
+}
+inline void PGMFreezeInfo::clear_video_gm_player_freeze() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.video_gm_player_freeze_.Clear();
+}
+inline const ::google::protobuf::Map<::uint32_t, ::uint64_t>& PGMFreezeInfo::_internal_video_gm_player_freeze() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.video_gm_player_freeze_.GetMap();
+}
+inline const ::google::protobuf::Map<::uint32_t, ::uint64_t>& PGMFreezeInfo::video_gm_player_freeze() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_map:helloworld.PGMFreezeInfo.video_gm_player_freeze)
+  return _internal_video_gm_player_freeze();
+}
+inline ::google::protobuf::Map<::uint32_t, ::uint64_t>* PGMFreezeInfo::_internal_mutable_video_gm_player_freeze() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.video_gm_player_freeze_.MutableMap();
+}
+inline ::google::protobuf::Map<::uint32_t, ::uint64_t>* PGMFreezeInfo::mutable_video_gm_player_freeze() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_map:helloworld.PGMFreezeInfo.video_gm_player_freeze)
+  return _internal_mutable_video_gm_player_freeze();
+}
+
+// map<uint32, uint64> audio_pgm_player_freeze = 2;
+inline int PGMFreezeInfo::_internal_audio_pgm_player_freeze_size() const {
+  return _internal_audio_pgm_player_freeze().size();
+}
+inline int PGMFreezeInfo::audio_pgm_player_freeze_size() const {
+  return _internal_audio_pgm_player_freeze_size();
+}
+inline void PGMFreezeInfo::clear_audio_pgm_player_freeze() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.audio_pgm_player_freeze_.Clear();
+}
+inline const ::google::protobuf::Map<::uint32_t, ::uint64_t>& PGMFreezeInfo::_internal_audio_pgm_player_freeze() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.audio_pgm_player_freeze_.GetMap();
+}
+inline const ::google::protobuf::Map<::uint32_t, ::uint64_t>& PGMFreezeInfo::audio_pgm_player_freeze() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_map:helloworld.PGMFreezeInfo.audio_pgm_player_freeze)
+  return _internal_audio_pgm_player_freeze();
+}
+inline ::google::protobuf::Map<::uint32_t, ::uint64_t>* PGMFreezeInfo::_internal_mutable_audio_pgm_player_freeze() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.audio_pgm_player_freeze_.MutableMap();
+}
+inline ::google::protobuf::Map<::uint32_t, ::uint64_t>* PGMFreezeInfo::mutable_audio_pgm_player_freeze() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_map:helloworld.PGMFreezeInfo.audio_pgm_player_freeze)
+  return _internal_mutable_audio_pgm_player_freeze();
 }
 
 #ifdef __GNUC__
