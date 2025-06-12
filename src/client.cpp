@@ -3,6 +3,7 @@
 #include <string>
 #include <thread>
 #include <grpcpp/grpcpp.h>
+#include <google/protobuf/any.h>
 #include "helloworld.pb.h"
 #include "helloworld.grpc.pb.h"
 
@@ -13,6 +14,7 @@ using grpc::Status;
 using helloworld::Greeter;
 using helloworld::HelloReply;
 using helloworld::HelloRequest;
+using helloworld::PGMFreezeInfo;
 
 class GreeterClient
 {
@@ -109,7 +111,37 @@ public:
         while (true)
         {
             if (stream->Read(&reply))
+            {
+                // 反序列化 reply.data() 中的 PGMFreezeInfo
+                if (reply.has_data())
+                {
+                    PGMFreezeInfo freeze_info;
+                    if (reply.data().UnpackTo(&freeze_info))
+                    {
+                        std::cout << "Successfully unpacked PGMFreezeInfo:" << std::endl;
+                        
+                        // 打印 video_gm_player_freeze map
+                        std::cout << "Video GM Player Freeze:" << std::endl;
+                        for (const auto& pair : freeze_info.video_gm_player_freeze())
+                        {
+                            std::cout << "  Player " << pair.first << ": " << pair.second << std::endl;
+                        }
+                        
+                        // 打印 audio_pgm_player_freeze map
+                        std::cout << "Audio PGM Player Freeze:" << std::endl;
+                        for (const auto& pair : freeze_info.audio_pgm_player_freeze())
+                        {
+                            std::cout << "  Player " << pair.first << ": " << pair.second << std::endl;
+                        }
+                    }
+                    else
+                    {
+                        std::cerr << "Failed to unpack PGMFreezeInfo from Any" << std::endl;
+                    }
+                }
+                
                 std::cout << "Received response: " << reply.message() << std::endl;
+            }
             else
                 std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
